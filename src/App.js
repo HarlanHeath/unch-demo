@@ -3,6 +3,7 @@ import { Steps, Button, message, Card, Radio } from 'antd';
 import AppointmentInfo from "./components/AppointmentInfo"
 import Costs from "./components/Costs"
 import CancelAppointment from "./components/CancelAppointment"
+import SideBanner from "./components/SideBanner"
 import './App.css';
 
 const { Step } = Steps;
@@ -124,8 +125,8 @@ class App extends React.Component {
       </Radio.Group>
     )
     return (
-      <div>
-        <Card title={radioGroup} style={{ width: "70vw" }}>
+      <div className="App">
+        <Card title={radioGroup} style={{ width: "70vw", height: "65vh" }}>
           <Steps current={current}>
             {steps.map(item => (
               <Step key={item.title} title={item.title} />
@@ -150,9 +151,13 @@ class App extends React.Component {
             )}
           </div>
         </Card>
+        <div style={{ width: "30vw", height: "65vh", backgroundColor: "#242424", color: "white" }}>
+          <SideBanner />
+
+        </div>
         {/* <AppointmentInfo /> */}
         {/* <Costs /> */}
-        <CancelAppointment />
+        {/* <CancelAppointment /> */}
       </div>
     );
   }
