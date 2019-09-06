@@ -13,22 +13,24 @@ const steps = [
   {
     title: '',
     content: (
-      <div>
+      <div className="content-main">
         <h2> Let me help you get started with your appointment </h2>
-        <h2>Patient: </h2>
-        <select style={{ width: 200 }}>
-          <option></option>
-          <option value="JohnJacobs"> John Jacobs </option>
-          <option value="MaryJacobs"> Mary Jacobs </option>
-          <option value="SarahJones"> Sarah Jones </option>
-        </select>
+        <div className="content-inner">
+          <h2>Patient: </h2>
+          <select style={{ width: 200 }}>
+            <option></option>
+            <option value="JohnJacobs"> John Jacobs </option>
+            <option value="MaryJacobs"> Mary Jacobs </option>
+            <option value="SarahJones"> Sarah Jones </option>
+          </select>
+        </div>
       </div>
     )
   },
   {
     title: '',
     content: (
-      <div>
+      <div className="content-inner" >
         <h2>Appointment Type: </h2>
         <select style={{ width: 200 }}>
           <option></option>
@@ -41,7 +43,7 @@ const steps = [
   {
     title: '',
     content: (
-      <div>
+      <div className="content-inner" >
         <h2>Department: </h2>
         <select style={{ width: 200 }}>
           <option></option>
@@ -55,7 +57,7 @@ const steps = [
   {
     title: '',
     content: (
-      <div>
+      <div className="content-inner" >
         <h2>Clinic / Hospital: </h2>
         <select style={{ width: 200 }}>
           <option></option>
@@ -68,7 +70,7 @@ const steps = [
   {
     title: '',
     content: (
-      <div>
+      <div className="content-inner" >
         <h2>Provider: </h2>
         <select style={{ width: 200 }}>
           <option></option>
@@ -85,7 +87,7 @@ const steps = [
     title: '',
     content: (
       <Card>
-        <div>
+        <div className="content-main">
           <h2> You are looking to see your Primary Care Physician? </h2>
           <h3>Maria Olsen is not accepting direct new patients.</h3>
           <h3>Maria Olsen only accepts referral patients from a Primary Care Doctor</h3>
@@ -135,9 +137,14 @@ class App extends React.Component {
             ))}
           </Steps>
           <div className="steps-content">{steps[current].content}</div>
-          <div className="steps-action">
+          <div className="steps-action" >
+            {current > 0 && (
+              <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
+                Previous
+            </Button>
+            )}
             {current < steps.length - 1 && (
-              <Button type="primary" onClick={() => this.next()}>
+              <Button type="primary" style={{ marginLeft: 16 }} onClick={() => this.next()}>
                 Next
             </Button>
             )}
@@ -146,21 +153,17 @@ class App extends React.Component {
                 Done
             </Button>
             )}
-            {current > 0 && (
-              <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
-                Previous
-            </Button>
-            )}
           </div>
         </Card>
         <div style={{ width: "30vw", height: "65vh", backgroundColor: "#242424", color: "white" }}>
           <SideBanner />
 
         </div>
-        {/* <AppointmentInfo /> */}
-        {/* <Costs /> */}
-        {/* <CancelAppointment /> */}
-        {/* <ParkingDirections /> */}
+        {/* 
+        <AppointmentInfo />
+        <Costs />
+        <CancelAppointment />
+        <ParkingDirections /> */}
       </div>
     );
   }

@@ -124,19 +124,19 @@ class Costs extends React.Component {
                     </Steps>
                     <div className="steps-content">{steps[current].content}</div>
                     <div className="steps-action">
+                        {current > 0 && (
+                            <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
+                                Previous
+            </Button>
+                        )}
                         {current < steps.length - 1 && (
-                            <Button type="primary" onClick={() => this.next()}>
+                            <Button type="primary" style={{ marginLeft: 16 }} onClick={() => this.next()}>
                                 Next
             </Button>
                         )}
                         {current === steps.length - 1 && (
                             <Button type="primary" onClick={() => message.success('Processing complete!')}>
                                 Done
-            </Button>
-                        )}
-                        {current > 0 && (
-                            <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
-                                Previous
             </Button>
                         )}
                     </div>

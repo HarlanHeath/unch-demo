@@ -6,3 +6,18 @@
 	align-items: stretch;
 	align-content: stretch;
 }
+
+.content-main{
+text-align: center;
+margin-top: 25px;
+}
+
+.content-inner {
+	margin-top: 25px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+}
