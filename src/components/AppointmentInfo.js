@@ -22,6 +22,7 @@ class AppointmentInfo extends React.Component {
     render() {
         return (
             <div>
+                <h2> Tell me how I can assist you with this appointment </h2>
                 <Row gutter={8}>
                     <Col span={6} >
                         <Button type="primary" style={{ width: 200, height: 75 }} > Cancel Appointment </Button>

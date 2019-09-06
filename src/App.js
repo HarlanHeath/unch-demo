@@ -14,6 +14,7 @@ const steps = [
     title: '',
     content: (
       <div>
+        <h2> Let me help you get started with your appointment </h2>
         <h2>Patient: </h2>
         <select style={{ width: 200 }}>
           <option></option>
@@ -159,7 +160,7 @@ class App extends React.Component {
         {/* <AppointmentInfo /> */}
         {/* <Costs /> */}
         {/* <CancelAppointment /> */}
-        <ParkingDirections />
+        {/* <ParkingDirections /> */}
       </div>
     );
   }

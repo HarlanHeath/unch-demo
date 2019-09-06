@@ -8,6 +8,7 @@ const steps = [
         title: '',
         content: (
             <div>
+                <h2>What is the name of your insurance provider?</h2>
                 <h2>Insurance: </h2>
                 <select style={{ width: 200 }}>
                     <option></option>
@@ -21,6 +22,7 @@ const steps = [
         title: '',
         content: (
             <div>
+                <h2> What is your policy number?</h2>
                 <h2>Policy Number: </h2>
                 <input style={{ width: 200 }} type="text" />
             </div>
@@ -30,6 +32,7 @@ const steps = [
         title: '',
         content: (
             <div>
+                <h2> What is your policy type?</h2>
                 <h2>Policy Type: </h2>
                 <select style={{ width: 200 }}>
                     <option></option>
@@ -45,6 +48,7 @@ const steps = [
         title: '',
         content: (
             <div>
+                <h2> What is the type of visit? </h2>
                 <h2>Visit Type: </h2>
                 <select style={{ width: 200 }}>
                     <option></option>
@@ -63,6 +67,7 @@ const steps = [
         title: '',
         content: (
             <div>
+                <h2>Do you want the estimate for this year or next year?</h2>
                 <h2>Year: </h2>
                 <select style={{ width: 200 }}>
                     <option></option>
