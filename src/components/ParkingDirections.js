@@ -18,9 +18,7 @@ class CancelAppointment extends React.Component {
                     <div>
                         <h2> I can provide you with directions </h2>
                         <Button>SMS To Customer</Button>
-                        <h3>Because of the tremendous need for our services we have a policy of 24-hour notice for cancellations and a limit of three(3) failed or late cancellations for appointments</h3>
-                        <br />
-                        <h3>Since this is your third no-show/late cancellation, we will waive the cancellation fee</h3>
+                        <img src="../facility-map.png" alt="facility map" height="200" width="200" />
                     </div>
                 </Card>
             </div>

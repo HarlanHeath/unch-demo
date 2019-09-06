@@ -3,6 +3,7 @@ import { Steps, Button, message, Card, Radio } from 'antd';
 import AppointmentInfo from "./components/AppointmentInfo"
 import Costs from "./components/Costs"
 import CancelAppointment from "./components/CancelAppointment"
+import ParkingDirections from "./components/ParkingDirections"
 import SideBanner from "./components/SideBanner"
 import './App.css';
 
@@ -158,6 +159,7 @@ class App extends React.Component {
         {/* <AppointmentInfo /> */}
         {/* <Costs /> */}
         {/* <CancelAppointment /> */}
+        <ParkingDirections />
       </div>
     );
   }
